@@ -1,0 +1,33 @@
+name: Bug Report
+description: Create a report to help us fix a bug
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue in Whale Ocean!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug with observed behavior vs expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps to reproduce the issue.
+      placeholder: |
+        1. Run `npm run dev`
+        2. Navigate to `/whales`
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Node version, OS, browser (e.g. Node 22.5.0, Windows 11, Chrome 128).
+    validations:
+      required: true

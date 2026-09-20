@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #05080E;
+  --foreground: #F0F6FC;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Restrained Oceanic Background Glow */
+.ocean-gradient {
+  background: radial-gradient(circle at 50% 0%, rgba(0, 112, 243, 0.08) 0%, rgba(5, 8, 14, 1) 70%);
+}
+
+/* Custom Scrollbar for Terminal Tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090E17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #19263E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
